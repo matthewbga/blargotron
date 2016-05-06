@@ -1,24 +1,23 @@
 {
-  "name": "build",
+  "name": "blargs-new",
   "runtime": "python2.7",
   "description": "Serverless Lambda function for project: blargotron",
   "customName": false,
   "customRole": false,
-  "handler": "instances/build/handler.handler",
+  "handler": "blargs/new/handler.handler",
   "timeout": 6,
   "memorySize": 1024,
   "authorizer": {},
   "custom": {
-    "excludePatterns": [],
+    "excludePatterns": [".git/", "instances/"],
     "includePaths": [
-      "../../binaries",
       "../../shared",
       "../../vendored"
     ]
   },
   "endpoints": [
     {
-      "path": "instances/build",
+      "path": "blargs/new",
       "method": "GET",
       "type": "AWS",
       "authorizationType": "none",
