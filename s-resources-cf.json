@@ -48,6 +48,12 @@
           }
         ]
       }
+    },
+    "BlargotronTopic-Main" : {
+      "Type" : "AWS::SNS::Topic",
+      "Properties" : {
+        "TopicName" : "blargotron"
+      }
     }
   },
   "Outputs": {
