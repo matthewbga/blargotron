@@ -1,0 +1,7 @@
+---
+- name: example remote play
+  hosts: all
+  become: yes
+  tasks:
+    - name: install tree
+      yum: pkg=tree state=latest

@@ -9,7 +9,7 @@
   "memorySize": 1024,
   "authorizer": {},
   "custom": {
-    "excludePatterns": [".git/", "instances/"],
+    "excludePatterns": [".git/", "instances/", "amis/"],
     "includePaths": [
       "../../shared",
       "../../vendored"

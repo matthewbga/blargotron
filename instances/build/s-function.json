@@ -1,5 +1,5 @@
 {
-  "name": "build",
+  "name": "instances-build",
   "runtime": "python2.7",
   "description": "Serverless Lambda function for project: blargotron",
   "customName": false,
@@ -9,7 +9,7 @@
   "memorySize": 1024,
   "authorizer": {},
   "custom": {
-    "excludePatterns": [],
+    "excludePatterns": [".git", "amis/", "blargs/"],
     "includePaths": [
       "../../binaries",
       "../../shared",

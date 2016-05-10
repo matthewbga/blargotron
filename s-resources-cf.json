@@ -49,10 +49,34 @@
         ]
       }
     },
-    "BlargotronTopic-Main" : {
+    "BlargotronJobsDynamoDBTable": {
+      "Type": "AWS::DynamoDB::Table",
+      "Properties": {
+        "TableName": "BlargotronJobs",
+        "AttributeDefinitions": [
+          {
+            "AttributeName": "jobId",
+            "AttributeType": "S"
+          },
+          {
+            "AttributeName": "timestamp",
+            "AttributeType": "N"
+          }
+        ],
+        "KeySchema": [
+          {"AttributeName": "jobId", "KeyType": "HASH"},
+          {"AttributeName": "timestamp", "KeyType": "RANGE"}
+        ],
+        "ProvisionedThroughput": {
+          "ReadCapacityUnits": 25,
+          "WriteCapacityUnits": 25
+        }
+      }
+    },
+    "BlargotronTopicMain" : {
       "Type" : "AWS::SNS::Topic",
       "Properties" : {
-        "TopicName" : "blargotron"
+        "TopicName" : "BlargotronMain"
       }
     }
   },
