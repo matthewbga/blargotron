@@ -39,6 +39,33 @@
                 "logs:PutLogEvents"
               ],
               "Resource": "arn:aws:logs:${region}:*:*"
+            },
+            {
+              "Action": [
+                "dynamodb:BatchGetItem",
+                "dynamodb:BatchWriteItem",
+                "dynamodb:GetItem",
+                "dynamodb:GetRecords",
+                "dynamodb:PutItem",
+                "dynamodb:Query",
+                "dynamodb:Scan",
+                "dynamodb:UpdateItem"
+              ],
+              "Effect": "Allow",
+              "Resource": "arn:aws:dynamodb:us-east-1:368307275692:table/BlargotronJobs"
+            },
+            {
+              "Action": [
+                  "cloudformation:*",
+                  "cloudformation:ListStacks"
+              ],
+              "Effect": "Allow",
+              "Resource": "arn:aws:cloudformation:*:368307275692:*/*"
+            },
+            {
+              "Action": "*",
+              "Effect": "Allow",
+              "Resource": "*"
             }
           ]
         },

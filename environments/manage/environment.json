@@ -1,0 +1,9 @@
+{  
+  "app_name": "mab",
+  "dev":{  
+    "sg_name":"app2-sg"
+  },
+  "uat":{  
+    "sg_name":"uat-sg"
+  }
+}
